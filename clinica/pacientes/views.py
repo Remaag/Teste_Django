@@ -4,5 +4,5 @@ from django.shortcuts import render
 from .models import Paciente
 
 def lista_pacientes(request):
-    pacientes = Paciente.objects.all()
-    return render(request, 'clinica/pacientes/templates/pacientes/lista_pacientes.html', {'pacientes': pacientes})
+    pacientes = [{'nome': 'Gabriel', 'idade': 19}, {'nome': 'Jamily', 'idade': 20}]
+    return render(request, 'lista_pacientes.html', {'pacientes': pacientes})
